@@ -42,24 +42,28 @@ Airplane.prototype.land = function () {
 function Person(name, age) {
   this.name = name;
   this.age = age,
-  this.stomach = []
+  this.stomach = [];
 
 }
 
-Person.prototype.poop = function(){
-  this.stomach = []
-}
-Person.prototype.eat = function(currentValue){
-  this.stomach.push(this.currentValue){
-  if stomach.length>=10{
-    this.poop()
+Person.prototype.eat = function (someFood) {
+  if (this.stomach.length >= 10) {
+  this.stomach.push(someFood);
 
-  }
-  return this.stomach
 }
-Person.prototype.toString = function(){
-  return '${this.name},${this.age}'
+Person.prototype.poop = function() {
+  if (this.stomach.length <= 10) {
+ this.stomach.length = 0;
+
+  
 }
+
+
+}
+Person.prototype.toString = function () {
+  return `${this.name}, + ${this.age}` ;
+}
+
 
 /*
   TASK 2
@@ -75,7 +79,7 @@ Person.prototype.toString = function(){
         + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
 */
 
-function Car() {
+function Car(model, milesPerGallon) {
 
 }
 
