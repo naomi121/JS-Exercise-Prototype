@@ -59,7 +59,7 @@ Person.prototype.poop = function() {
 }
 
 
-}
+
 Person.prototype.toString = function () {
   return `${this.name}, + ${this.age}` ;
 }
@@ -80,9 +80,13 @@ Person.prototype.toString = function () {
 */
 
 function Car(model, milesPerGallon) {
-
+  (this.model = model), (this.milesPerGallon = milesPerGallon), (this.tank = 0),
+  (this.odometer = 0);
 }
 
+Car.prototype.fill = function(gallons) {
+  this.tank = + gallons;
+};
 /*
   TASK 3
     - Write a Baby constructor subclassing Person.
@@ -90,7 +94,11 @@ function Car(model, milesPerGallon) {
     - Besides the methods on Person.prototype, babies have the ability to `.play()`:
         + Should return a string "Playing with x", x being the favorite toy.
 */
-function Baby() {
+ //function Baby(Person) {
+  function Baby(name, age, favoriteToy) {
+  this.name = name;
+  this.age = age;
+  this.favoriteToy = favoriteToy;
 
 }
 
